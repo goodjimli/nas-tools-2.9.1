@@ -17,6 +17,8 @@ WIKI：https://github.com/jxxghp/nas-tools/wiki
 
 API: http://localhost:3000/api/v1/
 
+## 修复版本说明
+2.9.1.1 修复豆瓣图片问题
 
 ## 功能：
 
