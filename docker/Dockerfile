@@ -1,5 +1,11 @@
-FROM alpine
-RUN apk add --no-cache libffi-dev \
+FROM alpine:3.17 AS Builder
+RUN apk add --no-cache --virtual .build-deps \
+        libffi-dev \
+        gcc \
+        nano \
+        musl-dev \
+        libxml2-dev \
+        libxslt-dev \
     && apk add --no-cache $(echo $(wget --no-check-certificate -qO- https://raw.githubusercontent.com/goodjimli/nas-tools-2.9.1/master/package_list.txt)) \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo "${TZ}" > /etc/timezone \
