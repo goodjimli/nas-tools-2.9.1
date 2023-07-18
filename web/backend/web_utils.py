@@ -1,5 +1,5 @@
 import cn2an
-
+from functools import lru_cache
 from app.media import Media, Bangumi, DouBan
 from app.media.meta import MetaInfo
 from app.utils import StringUtils, ExceptionUtils, SystemUtils, RequestUtils
